@@ -4,7 +4,7 @@ const LetterBox = ({letters}) => {
     
     const lettersList = letters.map( letter => {
         return (
-        <Letter author= {letter.author}>{letter.message}</Letter>
+        <Letter author={letter.author} key={letter.id}>{letter.message}</Letter>
         )
     })
     

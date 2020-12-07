@@ -3,7 +3,7 @@ const Letter = ({author, children}) => {
     return(
         <>
             <li> 
-                <p> {children}! Author: {author}</p>
+                <p > {children}! Author: {author} </p>
             </li>
         </>
     )

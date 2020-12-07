@@ -5,12 +5,12 @@ const LetterConsole = () => {
     // const [letters, setLetters] = useState(0)
 
     let [letters, setLetters] = useState([
-        {author:"Maria", message: "Kaixo Olentzero"},
-        {author:"Gabriel", message: "Hello Santa"},
-        {author:"Alvaro", message: "Hola Reyes Magos"}])
+        {id:1, author:"Maria", message: "Kaixo Olentzero"},
+        {id:2, author:"Gabriel", message: "Hello Santa"},
+        {id:3, author:"Alvaro", message: "Hola Reyes Magos"}])
 
     // const change = () => {
-    //     setLetters[2].message( "No creo en Santa")
+    //     setLetters[2].( "No creo en Santa")
     // }
 
     return(
