@@ -5,7 +5,7 @@ const LetterBox = () => {
         <>
         <h3>LetterBox component</h3>
         <ul>
-            <Letter />
+            <Letter author="Maria">Hello Santa</Letter>
         </ul>
         </>
     )

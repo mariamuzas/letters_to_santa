@@ -1,7 +1,11 @@
-const Letter = () => {
+const Letter = ({author, children}) => {
+
     return(
         <>
-            <li> This is a Letter</li>
+            <li> 
+                <p>Author: {author}</p>
+                <p>Message: {children}</p>
+            </li>
         </>
     )
 }
