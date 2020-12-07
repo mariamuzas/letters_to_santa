@@ -1,14 +1,21 @@
 import Letter from "./Letter"
 
-const LetterBox = () => {
+const LetterBox = ({letters}) => {
+    
+    const lettersList = letters.map( letter => {
+        return (
+        <Letter author= {letter.author}>{letter.message}</Letter>
+        )
+    })
+    
     return(
         <>
         <h3>LetterBox component</h3>
         <ul>
-            <Letter author="Maria">Hello Santa</Letter>
+            {lettersList}
         </ul>
         </>
-    )
-}
+    );
+};
 
 export default LetterBox;
