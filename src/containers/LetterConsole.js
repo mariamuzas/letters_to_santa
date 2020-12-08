@@ -19,12 +19,12 @@ const LetterConsole = () => {
 
     return(
         <>
-        <LetterBox letters={letters}/>
-        {/* <button onClick = {change}> Grinch </button> */}
         <div>
             <h2>Add a letter:</h2>
-            <LetterForm />
+            <LetterForm onLetterSubmit= {(letter) => addLetter(letter)}/>
         </div>
+        <LetterBox letters={letters}/>
+        {/* <button onClick = {change}> Grinch </button> */}
         </>
     )
 }

@@ -1,28 +1,31 @@
 import { useState } from "react";
 import '../App.css'
-import Letter from "./Letter";
 
-const LetterForm = () => {
+const LetterForm = ({onLetterSubmit}) => {
 const [author, setAuthor] = useState("")
-const [text, setText] = useState("")
+const [message, setMessage] = useState("")
 
 const handleAuthorChange = (event) => {
     setAuthor(event.target.value)
 }
 
-const handleTextChange = (event) => {
-    setText(event.target.value)
+const handleMessageChange = (event) => {
+    setMessage(event.target.value)
 }
 
 const handleFormSubmit = (event) => {
     event.preventDefault()
     const authorToSubmit = author.trim()
-    const textToSubmit = text.trim()
-    if (!authorToSubmit || !textToSubmit){
+    const messageToSubmit = message.trim()
+    if (!authorToSubmit || !messageToSubmit){
         return
     }
+    onLetterSubmit({
+        author: authorToSubmit, 
+        message: messageToSubmit
+    })
     setAuthor ("")
-    setText("")
+    setMessage("")
 
 }
 
@@ -36,8 +39,8 @@ const handleFormSubmit = (event) => {
             <input 
                 type="text" 
                 placeholder="Your Letter" 
-                value={text}
-                onChange={handleTextChange}/>
+                value={message}
+                onChange={handleMessageChange}/>
             <input 
                 type="submit" 
                 value="Post"/>
