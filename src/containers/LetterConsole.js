@@ -11,9 +11,11 @@ const LetterConsole = () => {
         {id:2, author:"Gabriel", message: "Hello Santa"},
         {id:3, author:"Alvaro", message: "Hola Reyes Magos"}])
 
-    // const change = () => {
-    //     setLetters[2].( "No creo en Santa")
-    // }
+    const addLetter = (submittedLetter) => {
+        submittedLetter.id = Date.now()
+        const updatedLetters = [...letters, submittedLetter]
+        setLetters(updatedLetters)
+    }
 
     return(
         <>

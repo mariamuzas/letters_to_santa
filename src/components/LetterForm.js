@@ -1,5 +1,6 @@
 import { useState } from "react";
 import '../App.css'
+import Letter from "./Letter";
 
 const LetterForm = () => {
 const [author, setAuthor] = useState("")
@@ -13,8 +14,20 @@ const handleTextChange = (event) => {
     setText(event.target.value)
 }
 
+const handleFormSubmit = (event) => {
+    event.preventDefault()
+    const authorToSubmit = author.trim()
+    const textToSubmit = text.trim()
+    if (!authorToSubmit || !textToSubmit){
+        return
+    }
+    setAuthor ("")
+    setText("")
+
+}
+
     return (
-        <form>
+        <form className ="letter-form" onSubmit = {handleFormSubmit}>
             <input 
                 type="text" 
                 placeholder="Your Name" 
