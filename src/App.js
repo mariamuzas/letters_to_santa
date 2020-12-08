@@ -5,8 +5,10 @@ import LetterConsole from './containers/LetterConsole.js'
 function App() {
   return (
     <>
-      <h1>Santa Letters</h1>
-      <LetterConsole />
+      <div className="App">
+        <h1>Santa Letters</h1>
+        < LetterConsole />
+      </div>
     </>
   );
 }

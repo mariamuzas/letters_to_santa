@@ -15,7 +15,6 @@ const LetterConsole = () => {
 
     return(
         <>
-        <h2> This is the letter console</h2>
         <LetterBox letters={letters}/>
         {/* <button onClick = {change}> Grinch </button> */}
         </>
