@@ -1,4 +1,5 @@
-import Letter from "./Letter"
+import Letter from "./Letter";
+
 
 const LetterBox = ({letters}) => {
     
